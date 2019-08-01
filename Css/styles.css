@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+header{
+background-image: url("../pizza-images/bg-3.jpeg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+.neodo{
+    font-family: 'Merienda One', cursive;
+    color: rgb(226, 218, 218);
+}
+header a{
+    font-family: 'Norican', cursive;
+    font-size: 0.9em
+}
+.welcome{
+    font-family: 'Sriracha', cursive;
+
+    color: rgb(226, 218, 218);
+}
+header .navbar-brand{padding-left: 10px;}
+   

@@ -57,7 +57,7 @@ this Web app will solve all those struggle by finding information on pizza sitti
            
  ## click below link to  navigate this web application
 
- [NEODO-HOME-PIZZA]()
+ [NEODO-HOME-PIZZA](https://niygomhonor.github.io/Week-4-IP-PIZZA/)
 
 
  ### Licencing Application

@@ -2,9 +2,10 @@
     box-sizing: border-box;
 }
 header{
-background-image: url("../pizza-images/bg-3.jpeg");
+background-image: url("../pizza-images/home-img.jpeg");
 background-repeat: no-repeat;
 background-size: cover;
+opacity: .9999;
 }
 .neodo{
     font-family: 'Merienda One', cursive;
@@ -84,9 +85,12 @@ font-family: 'Norican', cursive;
     border-radius: 80px;
 }
 /* Footer */
-
+#contact-1{
+    font-family: 'Eagle Lake', cursive; 
+}
  footer{
     background-color:rgba(34, 13, 13, 0.5);
+   
     /* padding: 10px 50px; */
 }
 footer p>span{
@@ -147,25 +151,31 @@ footer.column i+i{
    padding-top: 5px;
 }
 /* ***********************Order*********************** */
-input[type=text], input[type=number]{
-    width: 100%;
+input[type=text], input[type=number],option[value=egg]{
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 10px;
   }
   #Pizza-crusts #pizza-size{
       width: 60%;
       padding: 5px 5px;
       box-sizing: border-box;
+    
+  }
+  .legend{
+    font-family: 'Eagle Lake', cursive; 
+    font-size: 30px; 
   }
   
   .section-1{
   
         border: 4px solid rgb(65, 4, 24);
         padding: 20px 40px;
-        background: rgba(80, 80, 3, 0.8);
+        background: rgba(235, 63, 134, 0.8);
         width: 40%;
         border-radius: 5%;
         box-shadow: 10px 10px 4px#C443;
@@ -180,8 +190,57 @@ input[type=text], input[type=number]{
       background-size: cover;
   }
   main h1{
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Merienda One', cursive;
     color: aquamarine;
     text-align: center;  
   }
   /* Output of ordered pizza */
+  .orders{
+    cursor: pointer;
+    color: #0088cc;  
+  }
+  /* .pizza-output{
+      display: none;
+  } */
+  .pizza-output{
+      text-align: center
+  }
+  #ordersP{
+      display: none;
+      
+  }
+   #ordersP .card{
+      width: 40%;
+      background-color: rgb(36, 1, 1);
+      background: (0,0,0,0.5);
+      justify-content:center;
+      position: relative;
+      left: 30%;
+  }
+  .orders{
+      cursor: pointer;
+      color: antiquewhite;
+  }
+  .orders:hover{
+      text-decoration: underline;
+  }
+  /* ****************************Delivery******************************* */
+  .orders-output{
+      background-color:rgb(1, 15, 5);
+      opacity: .7;
+      display: none;
+      position: relative;
+      left: 50%;
+  }
+  #sum-order{
+      color: chocolate;
+  }
+  #ordersP #order-1{
+      color: burlywood;
+      font-family: 'Eagle Lake', cursive;  
+      font-size: 20px;
+  }
+.pizzaOrder{
+    font-size: 50px;
+    font-family: 'Eagle Lake', cursive;    
+}

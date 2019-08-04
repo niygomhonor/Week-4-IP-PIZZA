@@ -33,8 +33,8 @@ this Web app will solve all those struggle by finding information on pizza sitti
  |When user chooseto crust           | Then  then calculate its appropriate amount                |
  |When user choose pizza size        | Then take reference to its price                           |
  |when user enters number of pizza   | then calculate the amount by multiplying price and number  |
- |When user clicks to CheckAmount [x]| then execute total amount of chosen Pizza                  |
- |When user clicks to ordermore [x]  | then it display new inputs textboxes                       |
+ |When user clicks to CheckAmount    | then execute total amount of chosen Pizza                  |
+ |When user clicks to ordermore      | then it display new inputs textboxes                       |
  |when he clicks to make delivery    |then display the delivery form                              | 
  |When user clicks to text displayed | then display Ordering summary with total amount to be paid |
 

@@ -12,144 +12,122 @@
     <title>ORDER</title>
 </head>
 <body>
-        <header>
-                <div class="container-fluid p-0">
-                 <nav class="navbar navbar-expand-lg">
-                         <img src="pizza-images/logo-piz.jpeg" height="30" width="50" alt="logo">
-                     <a class="navbar-brand" href="#" id="font">NEODO-HOME-PIZZA</a>
-                     
-                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                       <span class="navbar-toggler-icon"></span>
-                     </button>
-                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                         <div class="mr-auto"></div>
-                       <ul class="navbar-nav">
-             
-                         <li class="nav-item active">
-                           <a class="nav-link" href="index.html" id="font">HOME <span class="sr-only">(current)</span></a>
-                         </li>
-                         <li class="nav-item">
-                           <a class="nav-link" href="about-us.html" id="font">ABOUT US</a>
-                         </li>
-                         
-                             <li class="nav-item">
-                                     <a href="order-pizza.html" class="nav-link" id="font">ORDER PIZZA</a>
-                                   </li>
-                             <li class="nav-item">
-                               <a href="#" class="nav-link" id="font">CONTACTS</a>
-                             </li>
+    <header>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg">
+                <img src="pizza-images/logo-piz.jpeg" height="30" width="50" alt="logo">
+                <a class="navbar-brand" href="#" id="font">NEODO-HOME-PIZZA</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html" id="font">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about-us.html" id="font">ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="order-pizza.html" class="nav-link" id="font">ORDER PIZZA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" id="font">CONTACTS</a>
+                        </li>
                        </ul>
-                     </div>
-                   </nav>  
-                </div></header>
-        <main>
-                <h1 class="card-title">ORDER YOUR PIZZA</h1>
-            <section class="section-1">
-                <!-- order form -->
-                
-                    <form id="orderPizza">
-                       
-                                <fieldset>
-                                    <legend class="legend"><b></b>Fill Ordering Form</b></legend>
-                                    <div class="row"></div>
-                                    <divc></div>
-                                    <label for="names"><b>Enter your names:</b><br><input id="myname" type="text" name="names" placeholder="Your names"></label><br>
-                                    <div id="new-orders">
-                                    <div class="form-group">
-                                    <label for="century" ><b>Choose your favorite toppings:</b> <br>
-
-                                    
-                                        <select class="form-control" id="top">
-                                            <option value=""></option>
-                                        <option value="egg" id="top">Bacon </option>
-                                        <option value="bacon" id="top"> onions</option>
-                                        <option value="beef" id="top">Beef-mince</option>
-                                        <option value="pineapple" id="top"> pineapple </option>
-                                        <option value="ham" id="top"> mushroom</option>
-                                        <option value="goat" id="top">Chicken</option>
-                                        <option value="chicken" id="top"> tomato</option>
-                                        <option value="samali" id="top">mozzarella</option> </select></label><br>
-                                    </div>
-
-                                    <div class="form-group">
-                                    <label for="crust" ><b>Select Your favorite Crust:</b><br>
-                                        <select name="" class="form-control" id="Pizza-crusts">
-                                                <option value=""></option>
-                                    <option value="custom" id="pizza-crust"> Custom </option>
-                                <option value="thin" id="pizza-crust">thin crust</option>
-                            <option value="thick" id="pizza-crust">thick crust</option>
-                        <option value="deep" id="pizza-crust">deep crust</option>
-                    <option value="flatbread" id="pizza-crust">flatbread crust</option>
-                <option value="stuffed" id="pizza-crust">stuffed crust</option>
-            </select>
-            </label><br>
-                                    </div>
-                                    <div class="form-group">
-                                    <label for="year" ><b>Select your desired Pizza Size</b><br>
-                                        <select name="" class="form-control" id="pizza-size"><br>
-                                            <option value=""></option>
-                                        <option value="Small" id="pizza-size">Small</option>
-                                        <option value="medium" id="pizza-size">Medium</option>
-                                        <option value="large" id="pizza-size">Large</option>
-                                    </select></label><br>
-                                    </div>
-                                    <label for="year" ><b>How many do you need?</b><br> <input name="day" id="number-pizza" type="number" placeholder="Number of Pizza" maxlength="10"></label><br>
-                                </div>
-                                </fieldset>
-                                <button class="btn btn-primary btn-lg" ><span class="btn btn-primary" id="add-order">Order more</span></button>
-                         <button type="submit" class="btn btn-primary btn-lg"  id="check">Check Amount</button>
-                  <button class="btn bg-info text-center d-block mx-auto" id="delivery">Make delivery</button>
-                          </form>   
-            </section>
-            
-            
-    
-                      <div class="pizza-output">
-                    
-                      <ul id="Pizzas">
-          
-                      </ul>
-                   
-                    
-                      <div id="ordersP">
-                          <div class="card">
-                            
-                            
-                      <p id="order-1">Pizza-toppings:<span class="order-topping"></span></p>
-                      <p id="order-1">Pizza-Crust:<span class="order-crust"></span></p>
-                      <p id="order-1">Pizza-Size:<span class="order-size"></span></p>
-                      <p id="order-1">Number of pizza:<span class="order-number"></span></p>
-                      <p id="order-1">Total:<span class="order-tot"></span></p>
+                </div>
+            </nav>  
+        </div>
+    </header>
+    <main>
+        <h1 class="card-title">ORDER YOUR PIZZA</h1>
+        <section class="section-1">
+        <!-- order form --> 
+        <form id="orderPizza">
+            <fieldset>
+                <legend class="legend"><b></b>Fill Ordering Form</b></legend>
+                <div class="row"></div>
+                <label for="names"><b>Enter your names:</b><br><input id="myname" type="text" name="names" placeholder="Your names"></label><br>
+                <div id="new-orders">
+                    <div class="form-group">
+                        <label for="century" ><b>Choose your favorite toppings:</b> <br>
+                            <select class="form-control" id="top">
+                                <option value=""></option>
+                                <option value="egg" id="top">Bacon </option>
+                                <option value="bacon" id="top"> onions</option>
+                                <option value="beef" id="top">Beef-mince</option>
+                                <option value="pineapple" id="top"> pineapple </option>
+                                <option value="ham" id="top"> mushroom</option>
+                                <option value="goat" id="top">Chicken</option>
+                                <option value="chicken" id="top"> tomato</option>
+                                <option value="samali" id="top">mozzarella</option>
+                            </select>
+                        </label><br>
                     </div>
-                      <ul id="order">
-
-                      </ul>
-                    
+                    <div class="form-group">
+                        <label for="crust" ><b>Select Your favorite Crust:</b><br>
+                            <select name="" class="form-control" id="Pizza-crusts">
+                                <option value=""></option>
+                                <option value="custom" id="pizza-crust"> Custom </option>
+                                <option value="thin" id="pizza-crust">thin crust</option>
+                                <option value="thick" id="pizza-crust">thick crust</option>
+                                <option value="deep" id="pizza-crust">deep crust</option>
+                                <option value="flatbread" id="pizza-crust">flatbread crust</option>
+                                <option value="stuffed" id="pizza-crust">stuffed crust</option>
+                            </select>
+                        </label><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="year" ><b>Select your desired Pizza Size</b><br>
+                            <select name="" class="form-control" id="pizza-size"><br>
+                                <option value=""></option>
+                                <option value="Small" id="pizza-size">Small</option>
+                                <option value="medium" id="pizza-size">Medium</option>
+                                <option value="large" id="pizza-size">Large</option>
+                            </select>
+                        </label><br>
+                    </div>
+                    <label for="year" ><b>How many do you need?</b><br> <input name="day" id="number-pizza" type="number" placeholder="Number of Pizza" maxlength="10"></label><br>
+                </div>
+            </fieldset>
+            <button class="btn btn-primary btn-lg" ><span class="btn btn-primary" id="add-order">Order more</span></button>
+            <button type="submit" class="btn btn-primary btn-lg"  id="check">Check Amount</button>
+            <button class="btn bg-info text-center d-block mx-auto" id="delivery">Make delivery</button>
+        </form>   
+    </section>
+    <div class="pizza-output">
+        <ul id="Pizzas">
+        </ul>
+        <div id="ordersP">
+            <div class="card">
+                <p id="order-1">Pizza-toppings:<span class="order-topping"></span></p>
+                <p id="order-1">Pizza-Crust:<span class="order-crust"></span></p>
+                <p id="order-1">Pizza-Size:<span class="order-size"></span></p>
+                <p id="order-1">Number of pizza:<span class="order-number"></span></p>
+                <p id="order-1">Total:<span class="order-tot"></span></p>
+            </div>
+            <ul id="order">
+            </ul>
+        </div>
+        <!-- Delivery -->
+        <div class="col-md-6 col-sm-6">
+            <div class="orders-output justify-content-center">
+                <h1 class="textt-center" id="ordering">Delivery Form</h1>
+                <h2 class="text-center" id="sum-order"> Enjoy! <br>Your order is the following</h2>
+                <div class="overlay">
+                    <div class="customer-data row">
+                        <div class="col-sm-3"></div>
+                            <form action="" class="form-group col-sm-6 input-data">
+                                <input type="text" class="form-control" placeholder="Enter your names:">
+                                <input type="text" class="form-control" placeholder="Enter your phone Number:">
+                                <input type="text" class="form-control" placeholder="Enter  the location">
+                                <span class="btn btn-primary" id="sub">Submit</span>
+                            </form>
+                    </div>
                 </div>
             </div>
-
-                  
-                    <!-- Delivery -->
-                    <div class="col-md-6 col-sm-6">
-                        
-                       <div class="orders-output justify-content-center">
-                           <h1 class="textt-center" id="ordering">Delivery Form</h1>
-                           <h2 class="text-center" id="sum-order"> Enjoy! <br>Your order is the following</h2>
-            
-                           <div class="overlay">
-                               <div class="customer-data row">
-                                   <div class="col-sm-3"></div>
-                                   <form action="" class="form-group col-sm-6 input-data">
-                                       <input type="text" class="form-control" placeholder="Enter your names:">
-                                       <input type="text" class="form-control" placeholder="Enter your phone Number:">
-                                       <input type="text" class="form-control" placeholder="Enter  the location">
-                                       <span class="btn btn-primary" id="sub">Submit</span>
-                                   </form>
-                               </div>
-                           </div>
-                       </div>
-                    </div>
-               
-        </main>
+        </div>
+    </main>
 </body>
 </html>

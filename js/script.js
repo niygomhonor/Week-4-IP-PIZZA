@@ -97,7 +97,7 @@ $(".order-size").text(customer.size);
         // *****Reset*******//
        $("#myname").val("");
         $("#pizza-size option:selected").text("");
-         $("#top option:selected").text("");
+        $("#top option:selected").text("");
        $("#Pizza-crusts option:selected").text("");
        $("input#number-pizza").val(""); 
            

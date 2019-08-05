@@ -61,67 +61,62 @@ $("#add-order").click(function(){
     '<label for="year" ><b>How many do you need?</b> <input name="day" id="number-pizza" type="number" placeholder="Number of Pizza" maxlength="10"></label><br>')
 })
 
-    $("form#orderPizza").submit(function(event) {
-        event.preventDefault();
-        var inputtedSize = $("#pizza-size option:selected").text();
-        var inputtedToppings = $("#top option:selected").text();
-        var inputtedCrust=$("#Pizza-crusts option:selected").text();
-        var inputtedNumber=$("input#number-pizza").val();
-        var totalAmount=0;
-        var customer = new Order(inputtedSize,inputtedToppings,inputtedCrust,inputtedNumber,totalAmount);
+$("form#orderPizza").submit(function(event) {
+  event.preventDefault();
+  var inputtedSize = $("#pizza-size option:selected").text();
+  var inputtedToppings = $("#top option:selected").text();
+  var inputtedCrust=$("#Pizza-crusts option:selected").text();
+  var inputtedNumber=$("input#number-pizza").val();
+  var totalAmount=0;
+  var customer = new Order(inputtedSize,inputtedToppings,inputtedCrust,inputtedNumber,totalAmount);
 
        
         
 // ***************Delivery button******************/
-        $("#delivery").click(function(){
-          $(".orders-output").show();
-        })
+$("#delivery").click(function(){
+  $(".orders-output").show();
+})
 // submit person's details to delivery 
 
 $("#sub").click(function(){
-
   alert("Thank your for Ordering our Pizza. We are delivering it in few seconds!")
 })
-        $("#check").click (function(){
-    var pizzaTopping=$("#top").val();
-var pizzaCrust=$("#Pizza-crusts").val();
-var pizzaSize=$("#pizza-size").val();
-var pizzaNumber=$("#number-pizza").val();
+$("#check").click (function(){
+  var pizzaTopping=$("#top").val();
+  var pizzaCrust=$("#Pizza-crusts").val();
+  var pizzaSize=$("#pizza-size").val();
+  var pizzaNumber=$("#number-pizza").val();
 
     ///function on orders
-
-    
-   var totalAmount1=0,totalAmount2=0,totalAmount3=0;
+  var totalAmount1=0,totalAmount2=0,totalAmount3=0;
   
 //************************Swich for toppings**************************************** */
-    switch (pizzaTopping) {
-          case pizzaTopping="egg":
+  switch (pizzaTopping) {
+        case pizzaTopping="egg":
            totalAmount1=totalAmount1+500
-          break;
-            case pizzaTopping="bacon":
+        break;
+        case pizzaTopping="bacon":
            totalAmount1=totalAmount1+1000
-            break;
-            case pizzaTopping="beef":
+        break;
+        case pizzaTopping="beef":
            totalAmount1=totalAmount1+400
-            break;
-            case pizzaTopping="pineapple":
+        break;
+        case pizzaTopping="pineapple":
            totalAmount1=totalAmount1+500
-            break;
-            case pizzaTopping="ham ":
+        break;
+        case pizzaTopping="ham ":
            totalAmount1=totalAmount1+400
-            break;
-            case pizzaTopping="goat ":
+        break;
+        case pizzaTopping="goat ":
            totalAmount1=totalAmount1+500
-            break;
-            case pizzaTopping="chicken ":
+        break;
+        case pizzaTopping="chicken ":
            totalAmount1=totalAmount1+500
-            break;
-            case pizzaTopping="samali":
+        break;
+        case pizzaTopping="samali":
            totalAmount1=totalAmount1+500
-            break;
-            
-        
-    }
+        break;
+      }
     
 //******************************SwiTch for Size********************************** */
   
@@ -134,10 +129,8 @@ var pizzaNumber=$("#number-pizza").val();
     break;
     case pizzaSize="large":
      totalAmount2=totalAmount2+4000;
-    break;
-      
-  
-}
+    break;         
+  }
 switch (pizzaCrust) {
   case pizzaCrust="custom":
   totalAmount3=totalAmount3+400;
@@ -167,20 +160,20 @@ $("#ordersP").show();
 $(".order-topping").text(customer.topping);
 $(".order-crust").text(customer.crust);
 $(".order-size").text(customer.size);
- $(".order-number").text(customer.number);
- $(".order-tot").text(totalAmount);
+$(".order-number").text(customer.number);
+$(".order-tot").text(totalAmount);
  confirm("Reload page to order again");
  })
         // *****Reset*******//
-      $("#myname").val("");
-      $("#pizza-size option:selected").text("");
-      $("#top option:selected").text("");
-      $("#Pizza-crusts option:selected").text("");
-       $("input#number-pizza").val(""); 
+$("#myname").val("");
+$("#pizza-size option:selected").text("");
+$("#top option:selected").text("");
+$("#Pizza-crusts option:selected").text("");
+$("input#number-pizza").val(""); 
       
        
-    });
-  });
+});
+});
 
 
 

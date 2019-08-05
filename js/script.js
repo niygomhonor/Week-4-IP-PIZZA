@@ -8,9 +8,8 @@ function Order(size,topping,crust,number,total) {
     this.total=total;
   }
 
-  Order.prototype.pizzaOrder=function() {
-    return ("<p class='pizzaOrder'><b>Your Orderings details</b></p>");
-  }
+ 
+
   Order.prototype.findAmount=function() {
     return totalAmount;
   }
@@ -68,70 +67,48 @@ $("#add-order").click(function(){
         var inputtedToppings = $("#top option:selected").text();
         var inputtedCrust=$("#Pizza-crusts option:selected").text();
         var inputtedNumber=$("input#number-pizza").val();
-        var totalAmount;
+        var totalAmount=0;
         var customer = new Order(inputtedSize,inputtedToppings,inputtedCrust,inputtedNumber,totalAmount);
 
-        console.log(inputtedSize);
-        console.log(inputtedToppings);
-        console.log(inputtedCrust);
-        console.log(inputtedNumber);
-        $("ul#Pizzas").append("<li><span class='orders'>" + customer.pizzaOrder() + "</span></li>")
+       
+        
 // ***************Delivery button******************/
         $("#delivery").click(function(){
           $(".orders-output").show();
         })
 // submit person's details to delivery 
+
 $("#sub").click(function(){
 
   alert("Thank your for Ordering our Pizza. We are delivering it in few seconds!")
 })
-        $(".orders").last().click (function(){
-$("#ordersP").show();
-$(".order-topping").text(customer.topping);
-$(".order-crust").text(customer.crust);
-$(".order-size").text(customer.size);
- $(".order-number").text(customer.number);
- $(".order-tot").append(customer.findAmount());
- 
-  })
-        // *****Reset*******//
-       $("#myname").val("");
-        $("#pizza-size option:selected").text("");
-        $("#top option:selected").text("");
-       $("#Pizza-crusts option:selected").text("");
-       $("input#number-pizza").val(""); 
-           
-     
-    });
-    $("#check").click(function(){
-var pizzaTopping=$("#top").val();
+        $("#check").click (function(){
+    var pizzaTopping=$("#top").val();
 var pizzaCrust=$("#Pizza-crusts").val();
 var pizzaSize=$("#pizza-size").val();
 var pizzaNumber=$("#number-pizza").val();
 
-
-
     ///function on orders
-    //************************
 
-    //Check price
-    var price; var totalAmount1=0,totalAmount2=0;
+    
+   var totalAmount1=0,totalAmount2=0,totalAmount3=0;
+  
 //************************Swich for toppings**************************************** */
     switch (pizzaTopping) {
           case pizzaTopping="egg":
            totalAmount1=totalAmount1+500
           break;
             case pizzaTopping="bacon":
-           totalAmount1=totalAmount1+500
+           totalAmount1=totalAmount1+1000
             break;
             case pizzaTopping="beef":
-           totalAmount1=totalAmount1+500
+           totalAmount1=totalAmount1+400
             break;
             case pizzaTopping="pineapple":
            totalAmount1=totalAmount1+500
             break;
             case pizzaTopping="ham ":
-           totalAmount1=totalAmount1+500
+           totalAmount1=totalAmount1+400
             break;
             case pizzaTopping="goat ":
            totalAmount1=totalAmount1+500
@@ -142,88 +119,75 @@ var pizzaNumber=$("#number-pizza").val();
             case pizzaTopping="samali":
            totalAmount1=totalAmount1+500
             break;
-            alert(totalAmount1);
+            
         
     }
     
-//******************************Swich for Size********************************** */
-       switch (pizzaSize) {
-       
-   case pizzaSize="Small":
-        price=3500;
-
-        if (pizzaCrust="Custom") {
-           totalAmount2=(price*pizzaNumber);
-            
-        }
-          else if (pizzaCrust="thick") {
-           totalAmount2=(price*pizzaNumber); 
-          }  
-          else if (pizzaCrust="thin") {
-           totalAmount2=(price*pizzaNumber); 
-          } 
-          else if (pizzaCrust="deep") {
-           totalAmount2=(price*pizzaNumber); 
-          } 
-          else if (pizzaCrust="flatbread") {
-           totalAmount2=(price*pizzaNumber); 
-          } 
-          else if (pizzaCrust="stuffed") {
-           totalAmount2=(price*pizzaNumber); 
-          } 
-        
-            case pizzaSize="medium":
-            price=6000;
-            if (pizzaCrust="Custom") {
-               totalAmount2=(price*pizzaNumber);
-            }
-              else if (pizzaCrust="thick") {
-               totalAmount2=(price*pizzaNumber); 
-              }  
-              else if (pizzaCrust="thin") {
-               totalAmount2=(price*pizzaNumber); 
-              } 
-              else if (pizzaCrust="deep") {
-               totalAmount2=(price*pizzaNumber); 
-              } 
-              else if (pizzaCrust="flatbread") {
-               totalAmount2=(price*pizzaNumber); 
-              } 
-              else if (pizzaCrust="stuffed") {
-               totalAmount2=(price*pizzaNumber); 
-              }
-            break;
-
-            case pizzaSize="large":
-            price=9000;
-            if (pizzaCrust="Custom") {
-               totalAmount2=(price*pizzaNumber);
-            }
-              else if (pizzaCrust="thick") {
-               totalAmount2=(price*pizzaNumber); 
-              }  
-              else if (pizzaCrust="thin") {
-               totalAmount2=(price*pizzaNumber); 
-              } 
-              else if (pizzaCrust="deep") {
-               totalAmount2=(price*pizzaNumber); 
-              } 
-              else if (pizzaCrust="flatbread") {
-               totalAmount2=(price*pizzaNumber); 
-              } 
-              else if (pizzaCrust="stuffed") {
-               totalAmount2=(price*pizzaNumber); 
-              }
-            break;
+//******************************SwiTch for Size********************************** */
+  
+  switch (pizzaSize) {
+    case pizzaSize="Small":
+     totalAmount2=totalAmount2+2000;
+    break;
+    case pizzaSize="medium":
+     totalAmount2=totalAmount2+3000;
+    break;
+    case pizzaSize="large":
+     totalAmount2=totalAmount2+4000;
+    break;
       
-            }
-totalAmount=totalAmount1+totalAmount2;
+  
+}
+switch (pizzaCrust) {
+  case pizzaCrust="custom":
+  totalAmount3=totalAmount3+400;
+  break;
+  case pizzaCrust="thick":
+    totalAmount3=totalAmount3+600;
+  break;
+  case pizzaCrust="thin":
+      totalAmount3=totalAmount3+700;
+  break;
+  case pizzaCrust="deep":
+        totalAmount3=totalAmount3+400;
+  break;
+  case pizzaCrust="flatbread":
+          totalAmount3=totalAmount3+400;
+  break;
+  case pizzaCrust="stuffed":
+      totalAmount3=totalAmount3+400;
+  break;
+}
+
+  
+ totalAmount=(totalAmount+totalAmount1+totalAmount2+totalAmount3)*inputtedNumber;
+
+      alert(" The total amount to be paid"+totalAmount);
+$("#ordersP").show();
+$(".order-topping").text(customer.topping);
+$(".order-crust").text(customer.crust);
+$(".order-size").text(customer.size);
+ $(".order-number").text(customer.number);
+ $(".order-tot").text(totalAmount);
+ confirm("Reload page to order again");
+ })
+        // *****Reset*******//
+      $("#myname").val("");
+      $("#pizza-size option:selected").text("");
+      $("#top option:selected").text("");
+      $("#Pizza-crusts option:selected").text("");
+       $("input#number-pizza").val(""); 
+      
        
-});
+    });
   });
 
 
 
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////Select Your favorite Crust:Select Your favorite Crust:Select Your favorite Crust:Select Your favorite Crust:
+
+
+
+
